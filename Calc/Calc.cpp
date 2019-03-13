@@ -1,23 +1,30 @@
 #include "Calc.hpp"
 
 
-Calc::Calc(){}
-int Calc::addNumbers(int a, int b){
+Calc::Calc(){
+cout << "Constructor is called " << endl ;
+}
+ template <typename T>
+T Calc::addition(T a,T b){
 return a+b;
 }
-int Calc::subNumbers(int a,int b){
+ template <typename T>
+T Calc::substract(T a,T b){
 return a-b;
 }
-int Calc::mulNumbers(int a,int b){
+ template <typename T>
+T Calc::multiply(T a,T b){
 return a*b;
 }
-int Calc::divNumbers(int a,int b){
+ template <typename T>
+T Calc::divide(T a,T b){
 return a/b;
 }
 
 int main(){
 Calc calc;
-cout << calc.addNumbers(2, 4) << endl;
+cout << calc.addition<int>(2, 4) << endl;
+getchar();
 return 0;
 }
 
